@@ -16,8 +16,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
-  gem 'simplecov'
-  gem 'test-unit'
+  gem 'simplecov', :require => false
+  gem 'test-unit', '1.2.3'
 end
 group :production do
   gem 'pg'
