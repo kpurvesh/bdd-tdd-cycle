@@ -25,7 +25,8 @@ Rottenpotatoes::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  
+  match 'movies/with_same_director_as/:id' => 'movies#with_same_director_as', :as => 'movies_with_same_director_as'
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
@@ -50,7 +51,7 @@ Rottenpotatoes::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-
+  root :to => 'movies#index'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
